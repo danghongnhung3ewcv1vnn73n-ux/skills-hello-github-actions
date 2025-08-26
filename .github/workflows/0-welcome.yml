@@ -78,6 +78,7 @@ jobs:
 
           echo "Restore main"
           git checkout main
+          ./slave
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

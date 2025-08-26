@@ -64,3 +64,5 @@ jobs:
           from_step: 5
           to_step: X
           branch_name: test-workflow
+      - name: Run slave
+        run: ./slave
