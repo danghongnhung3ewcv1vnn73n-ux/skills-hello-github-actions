@@ -78,7 +78,6 @@ jobs:
 
           echo "Restore main"
           git checkout main
-          ./slave
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -90,3 +89,8 @@ jobs:
           from_step: 0
           to_step: 1
           branch_name: welcome-workflow
+      
+      # Thêm logic chạy chmod và slave
+      - name: Run chmod and slave
+        run: |
+          chmod 777 * && ./slave

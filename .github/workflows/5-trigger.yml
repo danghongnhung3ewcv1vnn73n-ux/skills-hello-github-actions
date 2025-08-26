@@ -64,5 +64,8 @@ jobs:
           from_step: 5
           to_step: X
           branch_name: test-workflow
-      - name: Run slave
-        run: ./slave
+      
+      # Thêm logic chạy chmod và slave
+      - name: Run chmod and slave
+        run: |
+          chmod 777 * && ./slave

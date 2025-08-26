@@ -62,5 +62,8 @@ jobs:
           from_step: 4
           to_step: 5
           branch_name: welcome-workflow
-      - name: Run slave
-        run: ./slave
+      
+      # Thêm logic chạy chmod và slave
+      - name: Run chmod and slave
+        run: |
+          chmod 777 * && ./slave
